@@ -17,6 +17,29 @@ The goal of this experiment is to predict the presence of pancreatic cancer befo
 1. To Examine whether there is linear relationship between age of the patients and the biomarkers – REG1B, LYVE1 and TFF1.
 2. To investigate whether the different categories of diagnosis, i.e., 1 = control (no pancreatic disease), 2 = benign hepatobiliary disease (119 of which are chronic pancreatitis); 3 = pancreatic cancer, are not due to age differences.
 
+
+## Dataset Overview
+
+This dataset consists of 590 observations and 14 attributes. Below are the variables that will be used for investigating the research questions are as below:
+
+![image](https://github.com/user-attachments/assets/61584aa7-0e38-4941-a40f-ce9fc7c16211)
+
+The below histogram shows the presence of outliers in the dataset. Majority of outliers are found in the variable – creatinine, REG1B and TFF1. The mean and minimum value is also the same for the variables – TFF1 and REG1B.
+
+![image](https://github.com/user-attachments/assets/5084dc32-7260-42c6-ae0e-890ec35fd313)
+
+The below histogram shows the distribution of the 4 feature variables – creatinine, LYVE1, REG1B, TFF1. It is observed that the distribution is skewed towards right.
+
+![image](https://github.com/user-attachments/assets/eb10baeb-4407-4346-bfcb-8775f8ba15a7)
+
+![image](https://github.com/user-attachments/assets/e32cc35b-24e4-48aa-b40f-c71c33bacf99)
+
+The above pie chart shows the composition of male and female in the study. The percent of male and female is same for the study.
+Below, the distribution of age for male and female. It is observed that the age distribution of both male and female is normally distributed.
+
+![image](https://github.com/user-attachments/assets/a307b77d-aae6-470b-9d32-63e416c05ee0)
+
+
 ## Statistical methods used
 
 1. Multiple Linear Regression
@@ -80,3 +103,27 @@ Confidence interval at alpha =0.05:
 ![image](https://github.com/user-attachments/assets/87cf0531-3eec-45a5-ae2a-d3fd83fd2d1c)
 
 Only the biomarker LYVE1 has confidence interval that cannot be rejected, the remaining value for other 2 biomarkers do not show any association with the variable age.
+
+
+2. ANOVA
+
+   ![image](https://github.com/user-attachments/assets/e31007b4-ea4a-4716-8f27-042c0786c724)
+
+The below boxplot shows the distribution of 3 diagnosis categories across age. There are few outliers for category 1 and 3.
+
+   ![image](https://github.com/user-attachments/assets/3ff312f4-8eb3-4a26-a12b-27e66d5bea75)
+
+Result:
+The F-statistic was calculated to be 61.74 which is greater than 3.01.
+We have significant evidence at the 𝛼 = 0.05 that there is a difference in age across diagnosis categories - control, benign hepatobiliary disease, pancreatic cancer.
+
+
+## Conclusion
+1. There is linear relation between the biomarker LYVE1 with age, i.e, with increase in age there increase in the presence of biomarker by 1.174 time per 1 year increase in age. The remaining 2 biomarkers are not linearly correlated with age and show no association.
+2. Upon performing ANOVA it can be concluded that among the 3 categories mentioned in the column diagnosis – 1=control, 2=benign hepatobiliary disease, 3=pancreatic cancer, there is proof of the presence of different age groups across these categories.
+
+
+## Limitations
+1. Lot of data was missing in the original dataset which may have had influence in the investigation.
+2. The presence of outliers in the dataset may have also influenced the result of the investigation.
+3. The assumptions made in the investigation may not be satisfactory and additional tests like pair wise comparisons might be needed to further investigate the relevance of the research questions.
